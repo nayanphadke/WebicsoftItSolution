@@ -1,0 +1,18 @@
+.navbar-brand img {
+    /* Your styles here */
+    width: 130px;
+    height: auto;
+    border-radius: 10px;
+  }
+  #about{
+    background-color: rgb(159, 176, 176);
+  }
+  #courses{
+    background-color: #e9f4f3;
+  }
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  

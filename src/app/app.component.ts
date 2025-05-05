@@ -1,0 +1,33 @@
+import { Component } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { UserRegistrationComponent } from "./User/user-registration/user-registration.component";
+import { HomePageComponent } from "./home-page/home-page.component";
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, HeaderComponent, FooterComponent,CommonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'WebicsoftItSolution';
+
+  showLayout = true;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const url = event.urlAfterRedirects;
+        // Hide header/footer for dashboard layouts
+        if (url.startsWith('/admin') || url.startsWith('/student')) {
+          this.showLayout = false;
+        } else {
+          this.showLayout = true;
+        }
+      }
+    });
+  }
+}

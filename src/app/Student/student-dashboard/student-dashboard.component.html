@@ -1,0 +1,15 @@
+<!-- student-dashboard.component.html -->
+<div class="student-dashboard-wrapper">
+    <div class="welcome-box">
+      <h2>Welcome, {{ student?.fullName }} 👋</h2>
+      <p>Email: {{ student?.email }}</p>
+      <p>Mobile: {{ student?.mobile }}</p>
+    </div>
+  
+    <div class="profile-image" *ngIf="student?.imagePath">
+      <img [src]="'https://localhost:7062/' + student.filePath" alt="Student Image" />
+    </div>
+  
+    <!-- You can add more student-specific content here -->
+  </div>
+  

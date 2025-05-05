@@ -1,0 +1,209 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+            <div class="registration-form p-4 border rounded shadow">
+                <h2 class="text-center mb-4">User Registration</h2>
+                <form id="registrationForm">
+                    <div class="d-flex justify-content-around">
+                        <div class="col-md-3 mb-2">
+                            <label class="form-label">First Name</label>
+                            <input type="text" [(ngModel)]="registrationobj.firstName" name="firstName"
+                                class="form-control" required (keypress)="allowOnlyCharacters($event)">
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <label class="form-label">Middle Name</label>
+                            <input type="text" [(ngModel)]="registrationobj.middleName" name="middleName"
+                                class="form-control" required (keypress)="allowOnlyCharacters($event)">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" [(ngModel)]="registrationobj.lastName" name="lastName"
+                                class="form-control" required (keypress)="allowOnlyCharacters($event)">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 d-flex justify-content-around">
+                        <div class="col-md-3 ">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="tel" [(ngModel)]="registrationobj.mobileno" name="mobileno"
+                                class="form-control" placeholder="Enter 10-digit mobile number"
+                                (keypress)="allowOnlyNumbers($event)">
+                            <small *ngIf="registrationobj.mobileno && !isValidMobile(registrationobj.mobileno)"
+                                class="text-danger">Please enter valid mobile no</small>
+                        </div>
+                        <div class="col-md-4 ">
+                            <label class="form-label">Alternate Mobile No</label>
+                            <input type="tel" [(ngModel)]="registrationobj.alterMo" name="alterMo" class="form-control"
+                                placeholder="Enter 10-digit mobile number" (keypress)="allowOnlyNumbers($event)">
+                            <small *ngIf="registrationobj.alterMo && !isValidMobile(registrationobj.alterMo)"
+                                class="text-danger">Please enter valid mobile no</small>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" [(ngModel)]="registrationobj.email" name="email" class="form-control"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 d-flex justify-content-around">
+
+                        <div class="col-md-4">
+                            <label class="form-label">Registration Date</label>
+                            <input type="date" [(ngModel)]="registrationobj.date" name="date" class="form-control"
+                                required disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Role</label>
+                            <select class="form-select" [(ngModel)]="registrationobj.role" name="role" required>
+                                <option value="" disabled selected>Select Role</option>
+                                <option *ngFor="let user of Urole" [value]="user.roleName">{{ user.roleName }}</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-6 mb-3">
+                            <div id="partition" class=" text-white p-2 rounded mb-3">
+                                <strong>KYC</strong>
+                            </div>
+                            <div> <label class="form-label">Aadhar Number</label>
+                                <input type="text" [(ngModel)]="registrationobj.aadharNo" name="aadharNo"
+                                    class="form-control" required pattern="[0-9]{12}"
+                                    (keypress)="allowOnlyNumbers($event)" placeholder="Enter 12-digit Aadhar number">
+                                <small *ngIf="registrationobj.aadharNo && !isValidAadhar(registrationobj.aadharNo)"
+                                    class="text-danger">Enter valid Aadhar No</small>
+                            </div>
+                            <div><label class="form-label">PAN Number</label>
+                                <input type="text" [(ngModel)]="registrationobj.panNo" name="panNo" class="form-control"
+                                    placeholder="Enter PAN number">
+                                <small *ngIf="registrationobj.panNo && !isValidPAN(registrationobj.panNo)"
+                                    class="text-danger">Enter a valid PAN number (ABCDE1234F).</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div id="partition" class=" text-white p-2 rounded mb-3">
+                                <strong>Login</strong>
+                            </div>
+                            <div> <label class="form-label">Password</label>
+                                <input type="password" [(ngModel)]="registrationobj.password" name="password"
+                                    class="form-control" required>
+                                <small *ngIf="registrationobj.password && !isStrongPassword(registrationobj.password)"
+                                    class="text-danger">
+                                    Password must be at least 6 characters long, contain uppercase, lowercase, number &
+                                    special char.
+                                </small>
+                            </div>
+                            <div><label class="form-label">Confirm Password</label>
+                                <input type="password" [(ngModel)]="registrationobj.confirmPassword"
+                                    name="confirmPassword" class="form-control" required>
+                                <small
+                                    *ngIf="registrationobj.password !== registrationobj.confirmPassword && registrationobj.confirmPassword"
+                                    class="text-danger">Passwords do not match.</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div id="partition" class=" text-white p-2 rounded mb-3 ">
+                                <strong>Admission Details</strong>
+                            </div>
+
+                            <div class=" d-flex justify-content-around">
+
+                                <div class="col-md-5">
+                                    <label class="form-label">AdmissionType</label>
+                                    <select class="form-select" [(ngModel)]="registrationobj.admissionType" name="admissionType"  required>
+                                        <option value="" disabled selected>AdmissionType</option>
+                                        <option *ngFor="let users of AdmType" [value]="users.admissionType1">{{ users.admissionType1 }}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+
+                                <div class="col-md-5">
+                                    <label class="form-label">Technology</label>
+                                    <select class="form-select" [(ngModel)]="registrationobj.technology" name="technology" required>
+                                        <option value="" disabled selected>Select Role</option>
+                                        <option *ngFor="let user of Tech" [value]="user.technologyName">{{ user.technologyName}}
+                                        </option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div id="partition" class=" text-white p-2 rounded mb-3 ">
+                                <strong>Payment Details</strong>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div class="col-md-4">
+                                    <label class="form-label">Fees Paid</label>
+                                    <input type="number" [(ngModel)]="registrationobj.feesPaid" name="feesPaid" class="form-control" required>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <label class="form-label">Remaining</label>
+                                    <input type="number" [(ngModel)]="registrationobj.remaining" name="remaining" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Payment Type</label>
+                                    <select class="form-select" [(ngModel)]="registrationobj.paymentType" name="paymentType" required>
+                                        <option value="" disabled selected>Select Role</option>
+                                        <option *ngFor="let user of PmtType" [value]="user.paymentType1">{{ user.paymentType1 }}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="mb-4">
+                        <label class="form-label">Your Photograph</label>
+                        <input type="file" class="form-control" (change)="uploadImage($event)">
+                        <p *ngIf="imageError" class="text-danger mt-2">{{ imageError }}</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" (click)="onSubmit()">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="myModel" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">✅ Registration Successful</h5>
+            </div>
+            <div class="modal-body">
+                <p>Login by using your email and password.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    (click)="closeByDocument()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
