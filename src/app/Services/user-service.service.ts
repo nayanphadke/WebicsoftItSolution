@@ -96,6 +96,15 @@ getUserById(id:string){
   return this.http.get(`${this.baseUrl}/getUserById/${id}`);
 
 }
+saveAttendance(payload: any) {
+    return this.http.post(`${this.baseUrl}/save`, payload);
+  }
+
+
+  // employee leave
+   applyLeave(leaveData: any) {
+    return this.http.post(`${this.baseUrl}/apply`, leaveData);
+  }
 
 }
 

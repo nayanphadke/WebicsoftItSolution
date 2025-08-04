@@ -1,1 +1,19 @@
-<p>admin-layout works!</p>
+
+<div>
+        <app-adminnavbar></app-adminnavbar>
+    </div>
+<div class="container-fluid">
+    
+  <button class="btn btn-primary my-2" (click)="toggleSidebar()">Toggle Sidebar</button>
+
+  <div class="row">
+    <div [ngClass]="sidebarClass()">
+      <app-adminsidebar *ngIf="isSidebarVisible"></app-adminsidebar>
+    </div>
+
+    <div [ngClass]="contentClass" >
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="container mt-5 p-4 shadow bg-white rounded">
+  <h3 class="text-success mb-4 text-center">Pending Leave Requests</h3>
+
+  <table class="table table-bordered table-hover text-center align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th>Employee ID</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Reason</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of pendingLeaves">
+        <td>{{ leave.employeeId }}</td>
+        <td>{{ leave.fromDate | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ leave.toDate | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ leave.reason }}</td>
+        <td><span class="badge bg-warning text-dark">{{ leave.status }}</span></td>
+        <td>
+          <button class="btn btn-success btn-sm me-2" (click)="updateLeave(leave.id, 'Approved')">Approve</button>
+          <button class="btn btn-danger btn-sm" (click)="updateLeave(leave.id, 'Rejected')">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

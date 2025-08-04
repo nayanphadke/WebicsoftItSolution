@@ -25,10 +25,10 @@
                     <div class="row mb-3 d-flex justify-content-around">
                         <div class="col-md-3 ">
                             <label class="form-label">Mobile Number</label>
-                            <input type="tel" [(ngModel)]="registrationobj.mobileno" name="mobileno"
+                            <input type="tel" [(ngModel)]="registrationobj.mobileNo" name="mobileNo"
                                 class="form-control" placeholder="Enter 10-digit mobile number"
                                 (keypress)="allowOnlyNumbers($event)">
-                            <small *ngIf="registrationobj.mobileno && !isValidMobile(registrationobj.mobileno)"
+                            <small *ngIf="registrationobj.MobileNo && !isValidMobile(registrationobj.MobileNo)"
                                 class="text-danger">Please enter valid mobile no</small>
                         </div>
                         <div class="col-md-4 ">
@@ -156,7 +156,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <label class="form-label">Payment Type</label>
-                                    <select class="form-select" [(ngModel)]="registrationobj.paymentType" name="paymentType" required>
+                                    <select class="form-select" [(ngModel)]="registrationobj.PaymentType" name="PaymentType" required>
                                         <option value="" disabled selected>Select Role</option>
                                         <option *ngFor="let user of PmtType" [value]="user.paymentType1">{{ user.paymentType1 }}
                                         </option>
@@ -184,6 +184,9 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100" (click)="onSubmit()">Register</button>
+            <div class="text-center">
+                <a routerLink="/ulogin" class="btn btn-link">Already have an account? Login here</a>
+</div>
                 </form>
             </div>
         </div>

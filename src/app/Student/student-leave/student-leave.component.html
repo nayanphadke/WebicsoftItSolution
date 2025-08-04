@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h1>Employee Id</h1>
+  <p>{{employeeId}}</p>
+  <h4>Apply for Leave</h4>
+  <form (ngSubmit)="applyLeave()">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <label>From Date:</label>
+        <input type="date" class="form-control" [(ngModel)]="leave.fromDate" name="fromDate" required />
+      </div>
+      
+      <div class="col-md-6">
+        <label>To Date:</label>
+        <input type="date" class="form-control" [(ngModel)]="leave.toDate" name="toDate" required />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Reason:</label>
+      <textarea class="form-control" [(ngModel)]="leave.reason" name="reason" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Apply</button>
+  </form>
+</div>

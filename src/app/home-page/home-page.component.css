@@ -1,18 +1,43 @@
-.navbar-brand img {
-    /* Your styles here */
-    width: 130px;
-    height: auto;
-    border-radius: 10px;
-  }
-  #about{
-    background-color: rgb(159, 176, 176);
-  }
-  #courses{
-    background-color: #e9f4f3;
-  }
-  img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-  }
-  
+
+
+/* Neon Style Elements */
+.neon-text {
+
+ 
+}
+
+.text-neon {
+  color: #0b4539;
+
+ border-radius: 5px;
+  transition: color 0.3s ease-in-out;
+
+
+}
+
+.btn-outline-neon {
+  border: 2px solid #1e9f9b;
+  color: #00fff7;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-neon:hover {
+  background-color: #00fff7;
+  color: #000;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(145deg, #1c1c1c, #121212);
+}
+
+
+#courses {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+#contact {
+  background-color: #e6e5e5;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}

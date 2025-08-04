@@ -5,10 +5,12 @@ import { HomePageComponent } from "./home-page/home-page.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { CommonModule } from '@angular/common';
+import { UserAttendanceComponent } from "./User/user-attendance/user-attendance.component";
+import { ManagerLeaveApprovalsComponent } from "./Manager/manager-leave-approvals/manager-leave-approvals.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent,CommonModule],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, ManagerLeaveApprovalsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

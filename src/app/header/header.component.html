@@ -1,22 +1,45 @@
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg navbar-light custom-navbar sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">
-        <img src="webs.webp" alt="Logo" width="" height="40" class="d-inline-block align-text-top ">
+<nav class="navbar navbar-expand-lg" style="background-color: #8fbfc6;">
+  <div class="container-fluid">
+    <!-- Brand with responsive logo -->
+    <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+      <img src="webs.webp" alt="Webicsoft Logo" class="img-fluid me-2" style="max-height: 40px;">
     
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+    </a>
+
+    <!-- Toggler (mobile) -->
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Search Form -->
+      <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-dark text-white" type="submit">Search</button>
+      </form>
+
+      <!-- Buttons -->
+      <div class="d-flex">
+        <a routerLink="/ulogin" class="btn btn-outline-light me-2">Login</a>
+        <a routerLink="/res" class="btn btn-light">Enroll</a>
       </div>
     </div>
-  </nav>
-  <!-- Navbar End -->
-  
+  </div>
+</nav>

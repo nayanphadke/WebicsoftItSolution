@@ -8,6 +8,8 @@ import { StudentDashboardComponent } from './Student/student-dashboard/student-d
 import { AdminLayoutComponent } from './Admin/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 import { StudentProfileComponent } from './Student/student-profile/student-profile.component';
+import { UserAttendanceComponent } from './User/user-attendance/user-attendance.component';
+import { StudentLeaveComponent } from './Student/student-leave/student-leave.component';
 
 export const routes: Routes = [
     {path:'',component:HomePageComponent},
@@ -17,7 +19,10 @@ export const routes: Routes = [
         children:[
             {path:'',component:StudentDashboardComponent},
             {path:'studentdash',component:StudentDashboardComponent},
+              {path:'studentleave',component:StudentLeaveComponent},
+
             {path:'studentprofile',component:StudentProfileComponent},
+             {path:'attendance',component:UserAttendanceComponent},
             { path: 'res/:id', component: UserRegistrationComponent }
 
         ]

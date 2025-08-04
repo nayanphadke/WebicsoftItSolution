@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { UserServiceService } from '../../Services/user-service.service';
 import { Router, RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class UserRegistrationComponent {
   studentId: string | null = null;
   isEditMode: boolean = false;
 
-  constructor(private user: UserServiceService ,private route:ActivatedRoute) { }
+  constructor(private user: UserServiceService ,private route:ActivatedRoute,private http:HttpClient) { }
 
 
   registrationobj: any = {
@@ -120,6 +121,7 @@ else{
     );
   }
   
+
   getAddmissionType(){
     this.user.getAdmissionType().subscribe(
       (res)=>{
@@ -194,7 +196,9 @@ else{
     }
     this.user.registerUser(this.registrationobj, this.fileselect).subscribe(
       (response) => {
+                alert("User registered successfully!");
         this.openByDocument();
+        alert("User registered successfully!");
         console.log("User registered successfully!", response);
       },
       (error) => {

@@ -1,28 +1,20 @@
-/* styles.css */
-.custom-navbar {
-    background-color: #ffffff;
-    transition: background-color 0.3s ease;
-  }
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
   
-  .custom-navbar .nav-link {
-    color: #333;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .custom-navbar .nav-link:hover,
-  .custom-navbar .nav-link.active {
-    color: #007bff;
-    text-decoration: underline;
-  }
-  
-  .navbar-brand img {
-    margin-right: 8px;
-  }
-  
-  .sticky-top {
-    top: 0;
-    z-index: 1030;
-  }
-  
+
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.btn-light {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
