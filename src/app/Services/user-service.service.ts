@@ -106,6 +106,11 @@ saveAttendance(payload: any) {
     return this.http.post(`${this.baseUrl}/apply`, leaveData);
   }
 
+  //employee leave history
+  getLeaveHistory(employeeId: string) {
+    return this.http.get(`${this.baseUrl}/history/${employeeId}`);
+  }
+
 }
 
 

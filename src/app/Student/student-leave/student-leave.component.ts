@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { UserServiceService } from '../../Services/user-service.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-student-leave',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,RouterModule],
   templateUrl: './student-leave.component.html',
   styleUrl: './student-leave.component.css'
 })

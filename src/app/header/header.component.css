@@ -1,20 +1,35 @@
-.navbar-brand {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  
+.custom-navbar {
+  background-color: #45b08c;
+  font-family: 'Segoe UI', sans-serif;
 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-link:hover {
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.custom-navbar .nav-link:hover {
   text-decoration: underline;
 }
 
-.btn-light {
-  background-color: #ffffff;
-  color: #000;
+.custom-navbar .navbar-brand {
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
-.btn-outline-light:hover {
-  background-color: #fff;
-  color: #000;
+.custom-navbar .form-control {
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.custom-navbar .btn-warning {
+  background-color: #ffa800;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.custom-navbar .btn-warning:hover {
+  background-color: #e59500;
 }

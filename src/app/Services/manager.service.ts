@@ -15,10 +15,13 @@ getPendingRequests() {
 }
 
 updateLeaveStatus(id: number, status: string) {
-  return this.http.put(`${this.baseUrl}/update-status/${id}`, status, {
-    headers: { 'Content-Type': 'application/json' }
+  return this.http.put(`https://localhost:7062/User/update-status/${id}`, JSON.stringify(status), {
+    headers: {
+      'Content-Type': 'application/json'
+    }
   });
 }
+
 
 
 }

@@ -7,10 +7,11 @@ import { FooterComponent } from "./footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { UserAttendanceComponent } from "./User/user-attendance/user-attendance.component";
 import { ManagerLeaveApprovalsComponent } from "./Manager/manager-leave-approvals/manager-leave-approvals.component";
+import { ShowLeaveHistoryComponent } from "./Student/show-leave-history/show-leave-history.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, ManagerLeaveApprovalsComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

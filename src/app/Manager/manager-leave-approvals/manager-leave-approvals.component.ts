@@ -28,6 +28,7 @@ export class ManagerLeaveApprovalsComponent implements OnInit {
   }
 
   updateLeave(id: number, status: string) {
+    debugger
     this.leaveService.updateLeaveStatus(id, status).subscribe({
       next: () => {
         alert(`Leave ${status}`);

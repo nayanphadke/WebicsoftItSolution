@@ -1,0 +1,96 @@
+.footer {
+  background-color: #45b08c;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+
+.logo p {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.desc {
+  margin: 15px 0;
+  font-size: 14px;
+  color: #e2f8f1;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 5px;
+  background-color: #ffa800;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.contact ul, .links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact ul li, .links ul li {
+  margin-bottom: 10px;
+}
+
+.contact ul li i, .links ul li a {
+  margin-right: 10px;
+  color: white;
+}
+
+.links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #3ca982;
+  color: white;
+}
+
+.newsletter button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffa800;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}

@@ -10,27 +10,32 @@ import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard
 import { StudentProfileComponent } from './Student/student-profile/student-profile.component';
 import { UserAttendanceComponent } from './User/user-attendance/user-attendance.component';
 import { StudentLeaveComponent } from './Student/student-leave/student-leave.component';
+import { ShowLeaveHistoryComponent } from './Student/show-leave-history/show-leave-history.component';
 
 export const routes: Routes = [
-    {path:'',component:HomePageComponent},
-    { path: 'res', component: UserRegistrationComponent},
-    { path: 'ulogin', component:UserloginComponent },
-    {path:'student',component:StudentLayoutComponent,
-        children:[
-            {path:'',component:StudentDashboardComponent},
-            {path:'studentdash',component:StudentDashboardComponent},
-              {path:'studentleave',component:StudentLeaveComponent},
+    { path: '', component: HomePageComponent },
+    { path: 'res', component: UserRegistrationComponent },
+    { path: 'ulogin', component: UserloginComponent },
+    {
+        path: 'student', component: StudentLayoutComponent,
+        children: [
+            { path: '', component: StudentDashboardComponent },
+            { path: 'studentdash', component: StudentDashboardComponent },
+            { path: 'studentleave', component: StudentLeaveComponent },
+            { path: 'leavehistory', component: ShowLeaveHistoryComponent },
 
-            {path:'studentprofile',component:StudentProfileComponent},
-             {path:'attendance',component:UserAttendanceComponent},
-            { path: 'res/:id', component: UserRegistrationComponent }
+
+            { path: 'studentprofile', component: StudentProfileComponent },
+            { path: 'attendance', component: UserAttendanceComponent },
+            { path: 'res/:id', component: UserRegistrationComponent },
 
         ]
     },
-    {path:'admin',component:AdminLayoutComponent,
-        children:[
-            {path:'',component:AdminDashboardComponent},
-            {path:'admindash/:id',component:AdminDashboardComponent}
+    {
+        path: 'admin', component: AdminLayoutComponent,
+        children: [
+            { path: '', component: AdminDashboardComponent },
+            { path: 'admindash/:id', component: AdminDashboardComponent }
         ]
     }
 

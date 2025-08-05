@@ -1,3 +1,56 @@
-#partition{
-    background-color: #FF4B2B;
+.registration-form {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+/* Section headers like KYC, Login, etc. */
+#partition {
+  background-color: #45b08c;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Input focus effect */
+.form-control:focus,
+.form-select:focus {
+  border-color: #45b08c;
+  box-shadow: 0 0 0 0.2rem rgba(69, 176, 140, 0.25);
+}
+
+/* Buttons */
+button[type="submit"] {
+  background-color: #45b08c;
+  border: none;
+  transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3a9d76;
+}
+
+/* Link button style */
+.btn-link {
+  color: #45b08c;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .row > .col-md-4,
+  .row > .col-md-6 {
+    margin-bottom: 15px;
+  }
+
+  .registration-form {
+    padding: 20px;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
 }

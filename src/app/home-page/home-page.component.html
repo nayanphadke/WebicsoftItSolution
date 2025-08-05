@@ -1,31 +1,37 @@
-<!-- homepage.component.html -->
+<!-- Hero Carousel -->
 <div id="heroDarkCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active position-relative">
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
       <img src="ai-generated-8663299_1920.png" class="d-block w-100" alt="Slide 1">
       <div class="carousel-caption text-start d-none d-md-block">
-        <h1 class="display-4 fw-bold ">Empower Your Future</h1>
-        <p class="lead">Join Webicsoft – Your Learning Partner</p>
-        <a routerLink="/res" class="btn btn-outline-neon btn-lg me-2">Enroll Now</a>
-        <a routerLink="/ulogin" class="btn btn-outline-dark btn-lg">Login</a>
+        <h1 class="display-4 fw-bold text-white">Empower Your Future</h1>
+        <p class="lead text-white">Join Webicsoft – Your Learning Partner</p>
+        <a routerLink="/res" class="btn btn-warning btn-lg me-2 rounded-pill px-4">Enroll Now</a>
+        <a routerLink="/ulogin" class="btn btn-outline-light btn-lg rounded-pill px-4">Login</a>
       </div>
     </div>
-    <div class="carousel-item position-relative">
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
       <img src="women1-8080878_1920.png" class="d-block w-100" alt="Slide 2">
       <div class="carousel-caption text-start d-none d-md-block">
         <h1 class="display-5 fw-bold text-warning">Learn the Tech of Tomorrow</h1>
-        <p>Hands-on training with expert mentors</p>
+        <p class="text-white">Hands-on training with expert mentors</p>
       </div>
     </div>
+
+    <!-- Slide 3 -->
     <div class="carousel-item">
       <img src="job-5382501_1920.jpg" class="d-block w-100" alt="Slide 3">
       <div class="carousel-caption text-start d-none d-md-block">
         <h1 class="display-5 fw-bold text-info">Webicsoft India Pvt Ltd</h1>
-        <p>Where curiosity meets opportunity</p>
+        <p class="text-white">Where curiosity meets opportunity</p>
       </div>
     </div>
   </div>
 
+  <!-- Carousel Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#heroDarkCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -33,43 +39,50 @@
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
-
-<!-- About Section -->
-<section id="about" class="py-5">
-  <div class="container text-center section-bg">
-    <h2 class="text-neon mb-4">About Webicsoft</h2>
-    <p class="lead text-dark">
-      We are an advanced tuition and training institute offering academic and technical programs. We shape future engineers and developers with practical skills and a results-driven mindset.
+<section id="values" class="py-5 text-center position-relative">
+  <div class="container">
+    <h2 class="mb-2 fw-bold">
+      <span style="color: #00b27a;">About</span> <span style="color: #2c3e50;">Us</span>
+    </h2>
+    <div class="my-3">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <p class="text-muted mb-5">
+      At Webicsoft, we always put the quality of teaching and caring for students first, so please rest assured when choosing us.
     </p>
-  </div>
-</section>
 
-<!-- Courses Section -->
-<section id="courses" class="py-5">
-  <div class="container text-center section-bg">
-    <h2 class="text-neon mb-5">Our Courses</h2>
-    <div class="row g-4">
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
       <div class="col-md-4">
-        <div class="card bg-white shadow-sm h-100">
-          <div class="card-body">
-            <h5 class="card-title text-info">Full Stack Java</h5>
-            <p>HTML, CSS, JavaScript, Java, Spring Boot</p>
+        <div class="card h-100 border-0 shadow">
+          <img src="Office Collaboration in Bright Workspace.png" class="card-img-top rounded-top" alt="Learn and Play">
+          <div class="card-body bg-primary text-white">
+            <h5 class="card-title fw-bold">Learn and Play</h5>
+            <p class="card-text">Your child learns everything according to the educational program while playing.</p>
           </div>
         </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="col-md-4">
-        <div class="card bg-white shadow-sm h-100">
-          <div class="card-body">
-            <h5 class="card-title text-success">.NET Full Stack</h5>
-            <p>C#, ASP.NET Core, Angular, SQL Server</p>
+        <div class="card h-100 border-0 shadow">
+          <img src="Focused Software Developer at Work.png" class="card-img-top rounded-top" alt="Nutritious Dishes">
+          <div class="card-body" style="background-color: #f57242; color: #fff;">
+            <h5 class="card-title fw-bold">Nutritious Dishes</h5>
+            <p class="card-text">The dishes we prepare are provided with all the nutrients necessary for an active day.</p>
           </div>
         </div>
       </div>
+
+      <!-- Card 3 -->
       <div class="col-md-4">
-        <div class="card bg-white shadow-sm h-100">
-          <div class="card-body">
-            <h5 class="card-title text-warning">PL/SQL Development</h5>
-            <p>Oracle DB, Stored Procedures, SQL Queries</p>
+        <div class="card h-100 border-0 shadow">
+          <img src="ChatGPT Image Aug 5, 2025, 11_57_14 AM.png" class="card-img-top rounded-top" alt="Great Teachers">
+          <div class="card-body" style="background-color: #ffc107; color: #333;">
+            <h5 class="card-title fw-bold">Great Teachers</h5>
+            <p class="card-text">Experienced and lovable teachers will look after your children at Webicsoft.</p>
           </div>
         </div>
       </div>
@@ -77,19 +90,159 @@
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5" id="contact">
-  <div class="container text-center section-bg">
-    <h2 class="text-neon mb-3">Contact Us</h2>
-    <p class="text-dark mb-4">Have questions? We're just a call or click away.</p>
-    <p>
-      📧 <a href="mailto:info@webicsoft.com" class="text-primary text-decoration-underline">infowebicsoft.com</a><br>
-      📞 +91 98765 43210
-    </p>
+
+<!-- Courses Section -->
+<section id="courses" class="py-5" style="background-color: #e2f8f1;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side Image -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="Focused Software Developer at Work.png" class="img-fluid rounded shadow" alt="Courses Image">
+      </div>
+
+      <!-- Right Side Content -->
+      <div class="col-md-6 text-start">
+        <h2 class="mb-4">
+          <span class="text-success">Our</span> <span class="fw-bold" style="color: #2e3a7a;">Courses</span>
+        </h2>
+        <p class="text-muted mb-4">
+          Explore our top career-oriented programs designed to prepare you for success in the tech industry.
+        </p>
+        <ul class="list-unstyled">
+          <li class="mb-4 d-flex align-items-start">
+            <span class="badge rounded-pill bg-info me-3">1</span>
+            <div>
+              <h5 class="fw-bold text-info mb-1">Full Stack Java</h5>
+              <p class="mb-0">HTML, CSS, JavaScript, Java, Spring Boot</p>
+            </div>
+          </li>
+          <li class="mb-4 d-flex align-items-start">
+            <span class="badge rounded-pill bg-success me-3">2</span>
+            <div>
+              <h5 class="fw-bold text-success mb-1">.NET Full Stack</h5>
+              <p class="mb-0">C#, ASP.NET Core, Angular, SQL Server</p>
+            </div>
+          </li>
+          <li class="mb-4 d-flex align-items-start">
+            <span class="badge rounded-pill bg-warning text-dark me-3">3</span>
+            <div>
+              <h5 class="fw-bold text-warning mb-1">PL/SQL Development</h5>
+              <p class="mb-0">Oracle DB, Stored Procedures, SQL Queries</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="text-center py-3">
-  <small>© 2025 Webicsoft India Pvt Ltd | Designed for Brilliance</small>
-</footer>
+<section id="testimonials" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold">
+      What <span class="text-success">People Say</span>
+    </h2>
+    <div class="my-2">
+      <span class="dot bg-warning rounded-pill d-inline-block" style="width: 40px; height: 6px;"></span>
+    </div>
+    <p class="text-muted mb-5">Your happy children are our best reward.</p>
+
+    <div class="row justify-content-center align-items-center position-relative">
+      <!-- Left arrow -->
+      <div class="col-auto d-none d-md-block">
+        <i class="bi bi-chevron-left fs-2 text-secondary" style="cursor: pointer;"></i>
+      </div>
+
+      <!-- Testimonial 1 -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <img src="ChatGPT Image Aug 5, 2025, 11_57_14 AM.png" class="rounded-circle mb-3" width="120" height="120" alt="Testimonial 1">
+        <h5 class="fw-bold">Diana Peterson</h5>
+        <p class="text-secondary">Elisa's Mother</p>
+        <p class="text-muted px-3">
+          “We were looking for a kindergarten for a long time and finally found Kidtime.
+          Our daughter goes here with pleasure, she really likes the teachers, food, and daily routine.
+          We are completely satisfied!”
+        </p>
+        <p class="text-success fw-medium">December 15, 2024</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-5">
+        <img src="ChatGPT Image Aug 5, 2025, 11_57_14 AM.png" class="rounded-circle mb-3" width="120" height="120" alt="Testimonial 2">
+        <h5 class="fw-bold">Tom and Anna Smith</h5>
+        <p class="text-secondary">Bobby's Parents</p>
+        <p class="text-muted px-3">
+          “It's a wonderful kindergarten. Our kid is absolutely delighted. We never have any problems with getting him to go there.
+          Bobby goes to Kidtime with pleasure and returns satisfied and happy.”
+        </p>
+        <p class="text-success fw-medium">April 28, 2024</p>
+      </div>
+
+      <!-- Right arrow -->
+      <div class="col-auto d-none d-md-block">
+        <i class="bi bi-chevron-right fs-2 text-secondary" style="cursor: pointer;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="py-5" style="background-color: #f7f8fc;">
+  <div class="container">
+    
+    <div class="row align-items-center">
+       <h2 class="fw-bold">
+      Contact <span class="text-success">Us</span>
+    </h2>
+    <div class="my-2">
+      <span class="dot bg-warning rounded-pill d-inline-block" style="width: 40px; height: 6px;"></span>
+    </div>
+      
+      <!-- Left: Contact Form -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="card p-4 shadow border-0">
+          <h3 class="text-center fw-bold">
+            <span class="text-dark">Have</span> 
+            <span class="text-success">Questions?</span>
+          </h3>
+          <div class="text-center mb-3">
+            <span class="dot bg-warning d-inline-block rounded-pill" style="width: 40px; height: 6px;"></span>
+          </div>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control rounded-pill px-3 py-2" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control rounded-pill px-3 py-2" placeholder="Phone Number">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control rounded-pill px-3 py-2" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <textarea rows="4" class="form-control rounded-4 px-3 py-2" placeholder="Your Message"></textarea>
+            </div>
+            <button class="btn btn-warning text-white w-100 rounded-pill fw-bold">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right: Google Map -->
+      <div class="col-md-6">
+        <div class="mapouter shadow" style="border-radius: 10px; overflow: hidden;">
+         <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1141.6229630926862!2d73.82823145717634!3d18.45653064507059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1754376835023!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
